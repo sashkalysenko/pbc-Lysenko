@@ -2,9 +2,9 @@ def fibonacci(fib):
     """returns array of Fibonacci"""
 
     if fib < 0:
-        print("input should be a positive number")
+        return "input should be a positive number"
     elif fib == 1:
-        print([0, 1])
+        return [0, 1]
     else:
         a = 0
         b = 1
@@ -14,4 +14,4 @@ def fibonacci(fib):
             result.append(b)
             a = b
             b = c
-        print(result)
+        return result
