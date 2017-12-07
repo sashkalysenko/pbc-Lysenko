@@ -10,6 +10,5 @@ from my_app.print_pairs import pairs
                              ((-50, 4, 3, -2, 7, 6, 20, 12, 34, 60), [(-50, 60), (4, 6), (-2, 12), (3, 7)])
                          ])
 def test_pairs(test_input, expected):
-    print("\n>>>Test with input <{0}>\n>>>Expected <{1}>".format(test_input, expected))
     assert pairs(*test_input) == expected
     print("Passed")

@@ -1,6 +1,8 @@
 import argparse
+from my_app.log_wrapper import log_func_args
 
 
+@log_func_args
 def pairs(*args):
     """returns unique pairs of numbers with sum which equals to 10"""
 
