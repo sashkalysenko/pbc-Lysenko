@@ -1,6 +1,6 @@
 import pytest
 from my_app.fibonacci import fibonacci
-from my_app.print_pairs import pairs
+from my_app.unique_pairs import pairs
 
 
 @pytest.mark.parametrize("test_input,expected",
