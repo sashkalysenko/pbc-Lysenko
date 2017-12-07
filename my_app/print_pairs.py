@@ -19,4 +19,5 @@ if __name__ == '__main__':
     parser.add_argument('-n', '--numbers', nargs="+", type=int, help='List of numbers')
     args = parser.parse_args()
 
-    print(pairs(*args.numbers))
+    for item in pairs(*args.numbers):
+        print("{0}+{1}".format(item[0], item[1]))
