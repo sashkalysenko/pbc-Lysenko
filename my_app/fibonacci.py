@@ -1,3 +1,6 @@
+import argparse
+
+
 def fibonacci(fib):
     """returns array of Fibonacci"""
 
@@ -15,3 +18,11 @@ def fibonacci(fib):
             a = b
             b = c
         return result
+
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser(description="Returns array of Fibonacci")
+    parser.add_argument('-l', '--length', type=int, help='Length of Fibonacci array')
+    args = parser.parse_args()
+
+    print(fibonacci(args.length))
