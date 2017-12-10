@@ -20,7 +20,7 @@ You can connect to VM using `ssh vagrant@192.168.33.10`, password - `vagrant`.
 To run any application from my_app (fibonacci or unique pairs) you can use module app.py
 Example how to run fibonacci:
 * `app.py -fib 10` - prints first 10 numbers of Fibonacci sequence
-* `app.py -up 3 7 4 6 8 9` - prints unique pairs which sum is equal to 10
+* `app.py -up 3 7 4 6 8 9` - prints unique pairs which sum is equal to 10  
 NOTE: you can use both parameters in the same time to run fibonacci and unique pairs. 
 
 
