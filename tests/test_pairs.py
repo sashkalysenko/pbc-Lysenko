@@ -12,4 +12,3 @@ from my_app.unique_pairs import pairs
 @pytest.mark.pairs
 def test_pairs(test_input, expected):
     assert pairs(*test_input) == expected
-    print("Passed")

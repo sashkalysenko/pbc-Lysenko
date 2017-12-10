@@ -14,4 +14,3 @@ from my_app.fibonacci import fibonacci
 def test_fib(test_input, expected):
     print("\n>>>Test with input <{0}>\n>>>Expected <{1}>".format(test_input, expected))
     assert fibonacci(test_input) == expected
-    print("Passed")
