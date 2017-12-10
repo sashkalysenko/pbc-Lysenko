@@ -25,9 +25,9 @@ Main module with such modules:
 
 ## *Tests*
 
-Tests per each function are located in one file. So, to run them separately:
-* `pytest tests/BDD_tests.py -m fib` - runs tests for fibonacci-function.
-* `pytest tests/BDD_tests.py -m pairs` - runs tests for pairs-function.
+To run all tests:
+* `pytest tests` - runs all the created unit tests
+* `pytest tests -m pairs/fib` - runs tests for pairs/fibonacci functions accordingly.
 
 Run tests w/o parameters leads to performing them all.
 
