@@ -6,6 +6,5 @@ def log_func_args(func):
             print("\nInitiate call\n\t>>>{0}({1})".format(func.__name__, args[0]))
         else:
             print("\nInitiate call\n\t>>>{0}{1}".format(func.__name__, str(args)))
-        rs = func(*args)
-        return rs
+        return func(*args)
     return wrapper
