@@ -41,3 +41,12 @@ To run all tests:
 Run tests w/o parameters leads to performing them all.
 
 
+## *Fixtures*
+
+Contains module with class ConnectorSSH, which helps connect to VM via SSH.
+To initiate an object, set ip, name and password of VM.
+Also, the class has method to set_up selenium grid standalone server v 3.8.0 on connected VM.
+*NOTE* - currently the fixture is used in "test/test_sel_grid.py". Test does nothing, just sets up grid server.
+
+
+
