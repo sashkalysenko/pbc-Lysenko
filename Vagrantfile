@@ -51,6 +51,8 @@ Vagrant.configure("2") do |config|
   #
   config.vm.provider "virtualbox" do |vb|
   vb.name = "sashkalysenko"
+  
+  config.vm.define "sashkalysenko"
   end
   #   # Display the VirtualBox GUI when booting the machine
   #   vb.gui = true
