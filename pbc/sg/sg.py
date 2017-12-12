@@ -19,6 +19,11 @@ class BaseGrid:
         print 'Downloading Selenium server...'
         pass
 
+    @abstractmethod
+    def download_node_config(self):
+        print 'Downloading config...'
+        pass
+
 
 class Grid(BaseGrid):
 
@@ -31,9 +36,13 @@ class Grid(BaseGrid):
     def download(self):
         self._client.execute_command("wget -O selenium-server-standalone-3.8.0.jar https://goo.gl/SVuU9X")
 
+    def download_node_config(self):
+        self._client.execute_command("wget -O sg-node.json "
+                                     "https://gist.github.com/extsoft/aed4cb6e0b1ae3cd1d38cafffdd79310/raw/")
+
     def add_node(self):
-        self._client.execute_command("java -jar selenium-server-standalone-3.8.0.jar -role node  -hub "
-                                     "http://localhost:4444/grid/register >> log.txt 2>&1 &")
+        self._client.execute_command("java -jar selenium-server-standalone-3.8.0.jar -role node  -nodeConfig "
+                                     "sg-node.json >> log.txt 2>&1 &")
 
     def is_downloaded(self):
         if 'True' in self._client.execute_command("[ -f selenium-server-standalone-3.8.0.jar ] && echo 'True'"):
@@ -59,3 +68,6 @@ class StartGrid(BaseGrid):
             self._g.download()
         else:
             print 'Selenium server already downloaded'
+
+    def download_node_config(self):
+        self._g.download_node_config()
