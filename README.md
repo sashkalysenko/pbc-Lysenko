@@ -25,11 +25,15 @@ Example how to run fibonacci:
 NOTE: you can use both parameters in the same time to run fibonacci and unique pairs. 
 
 
-## my_app
+## *pbc/tools*
 Main module with such modules:
 * fibonacci.py - prints [Fibonacci's sequence](https://en.wikipedia.org/wiki/Fibonacci_number) - `fibonacci.py --length 3` --> `[0, 1, 1, 2]`
-* log_wrapper.py - decorator which prints function name and input before execution.
-* unique_pairs.py - returns unique pairs which sum is equal to 10 from sequence `unique_pairs.py --numbers 4 7 6 3 5 1` --> `4+6\n3+7`
+* numbers.py - returns unique pairs which sum is equal to 10 from sequence `unique_pairs.py --numbers 4 7 6 3 5 1` --> `4+6\n3+7`
+
+
+## *pbc/sg*
+* sg.py - contains StartGrid class which can download Selenium server, start hub, add node.
+* test_sel_grid.py - verifies setting up of hub and node of Selenium server
 
 
 ## *Tests*
@@ -45,8 +49,3 @@ Run tests w/o parameters leads to performing them all.
 
 Contains module with class ConnectorSSH, which helps connect to VM via SSH.
 To initiate an object, set ip, name and password of VM.
-Also, the class has method to set_up selenium grid standalone server v 3.8.0 on connected VM.
-*NOTE* - currently the fixture is used in "test/test_sel_grid.py". Test does nothing, just sets up grid server.
-
-
-
