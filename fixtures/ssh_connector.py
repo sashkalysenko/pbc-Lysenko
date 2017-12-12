@@ -38,7 +38,7 @@ class ConnectorSSH:
                 return [str(x) for x in stderr]
 
         else:
-            print("Connection has been lost. Try to reconnect and execute command again.")
+            raise Exception("Connection has been lost. Try to reconnect and execute command again.")
 
     def destroy(self):
         if self._client:
