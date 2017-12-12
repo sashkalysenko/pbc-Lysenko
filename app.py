@@ -1,6 +1,6 @@
 import argparse
-from my_app.fibonacci import fibonacci
-from my_app.unique_pairs import pairs
+from pbc.tools.fibonacci import fibonacci
+from pbc.tools.numbers import pairs
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="Runs one of the applications: fibonacci or unique_pairs")

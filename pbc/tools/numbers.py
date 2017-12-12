@@ -1,5 +1,5 @@
 import argparse
-from my_app.log_wrapper import log_func_args
+from pbc.func_decorator import log_func_args
 
 
 @log_func_args

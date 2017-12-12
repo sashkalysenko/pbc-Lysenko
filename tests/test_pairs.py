@@ -1,5 +1,5 @@
 import pytest
-from my_app.unique_pairs import pairs
+from pbc.tools.numbers import pairs
 
 testdata = [
                 ((5, -5), []),

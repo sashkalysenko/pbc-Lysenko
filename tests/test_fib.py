@@ -1,5 +1,5 @@
 import pytest
-from my_app.fibonacci import fibonacci
+from pbc.tools.fibonacci import fibonacci
 
 test_data = [
                 (-1, "input should be a positive number"),
