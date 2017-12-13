@@ -11,8 +11,7 @@ class GridConsole:
         self.driver.find_element_by_css_selector("li[type='config']").click()
 
     def _is_tab_selected(self, tab_name):
-        if self.driver.find_element_by_css_selector("li[type={0}]".format(tab_name)).get_attribute(
-                "class").endswith('selected'):
+        if len(self.driver.find_elements_by_css_selector("li.selected[type={0}]".format(tab_name))) > 0:
             return True
         else:
             return False
