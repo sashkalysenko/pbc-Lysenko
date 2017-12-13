@@ -1,6 +1,6 @@
 import pytest
-from fixtures.ssh_connector import ConnectorSSH
-from fixtures.firefox_connector import ConnectorFirefox
+from pbc.fixtures.firefox_connector import ConnectorFirefox
+from pbc.fixtures.ssh_connector import ConnectorSSH
 
 
 @pytest.fixture(scope='module')
