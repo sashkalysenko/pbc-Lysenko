@@ -1,6 +1,7 @@
 from pbc.sg.sg import Grid, StartGrid
 from pbc.sg.grid_console import GridConsole
 from pbc.sg.python_org import PythonOrg
+import requests
 
 
 def test_sel_grid(ssh):
@@ -30,3 +31,8 @@ def test_remote_driver(remote_ff):
         raise a
     finally:
         print 'close'
+
+
+def test_grid_request():
+    response = requests.get('http://192.168.33.10:4444/grid/console')
+    assert response.text.count('firefox.png') == 5
