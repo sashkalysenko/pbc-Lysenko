@@ -33,7 +33,7 @@ Main module with such modules:
 
 ## *pbc/sg*
 * sg.py - contains StartGrid class which can download Selenium server, start hub, add node.
-* test_sel_grid.py - verifies setting up of hub and node of Selenium server
+* test_sel_grid.py - verifies setting up of hub and node of Selenium server on VM and from browser.
 
 
 ## *Tests*
@@ -47,5 +47,5 @@ Run tests w/o parameters leads to performing them all.
 
 ## *Fixtures*
 
-Contains module with class ConnectorSSH, which helps connect to VM via SSH.
-To initiate an object, set ip, name and password of VM.
+* ssh_connector.py - contains ConnectorSSH, which helps connect to VM via SSH and execute commands.
+* firefox_connector.py - contains ConnectorFirefox, which provides connection with firefox via Selenium WebDriver.

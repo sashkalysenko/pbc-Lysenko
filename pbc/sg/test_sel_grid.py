@@ -1,4 +1,5 @@
 from pbc.sg.sg import Grid, StartGrid
+from pbc.sg.grid_console import GridConsole
 
 
 def test_sel_grid(ssh):
@@ -8,3 +9,8 @@ def test_sel_grid(ssh):
     grid.start_hub()
     grid.add_node()
     assert len(ssh.execute_command('pgrep java'))
+
+
+def test_grid_console(firefox):
+    grid_console = GridConsole(firefox)
+    assert grid_console.get_amount_browsers() == grid_console.get_ammount_sessions()
